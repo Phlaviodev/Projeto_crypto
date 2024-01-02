@@ -1,0 +1,98 @@
+body {
+  background-color: black; /* Cor de fundo cinza */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: absolute;
+  background-color: gray;
+  width: 100%;
+  height: 50px;
+  top: 0;
+}
+
+
+#aave,
+#solana,
+#ethereum,
+#bitcoin {
+  margin: 40px;
+  padding: 15px;
+  border: 1px solid #90ee90;
+  border-radius: 25px;
+  background-color: black;
+  color:white;
+  text-align: center;
+}
+#search-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor escura com 50% de opacidade */
+  z-index: 999; /* Valor alto para garantir que a camada escura apareça sobre o conteúdo */
+}
+
+#search-bar {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Valor alto para garantir que a barra de pesquisa apareça sobre a camada escura */
+}
+#fechar {
+  display: none;
+  position: fixed;
+  top: 5px;
+  left: 1200px;
+  z-index: 1000; /* Valor alto para garantir que a barra de pesquisa apareça sobre a camada escura */
+
+
+}
+#content {
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo apareça sobre a camada escura e a barra de pesquisa */
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: -1200px;
+  margin-top: -60px;
+}
+.buttons button {
+  margin-top: 65px;
+  cursor: pointer;
+	padding: 5px 16px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 22px;
+	margin-right:5px;
+	vertical-align: middle;
+	border: 1px solid;
+	border-radius: 6px;
+	color: #ffffff;
+	background-color: #2ea44f;
+	border-color: #1b1f2326;
+	box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+	transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+	transition-property: color, background-color, border-color;
+}
+
+
+.buttons button:hover {
+	background-color: #2c974b;
+	border-color: #1b1f2326;
+	transition-duration: 0.1s;
+}
