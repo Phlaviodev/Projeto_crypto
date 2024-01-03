@@ -62,6 +62,7 @@ function abrir() {
   searchBar.style.display = "block";
 }
 
+// Função para realizar a pesquisa (substitua este exemplo com sua lógica de pesquisa)
 function realizarPesquisa() {
   var resultDiv = document.getElementById("aave");
   var inputValue = parseInt(document.querySelector("#search-bar input").value);
@@ -72,7 +73,7 @@ function realizarPesquisa() {
     resultDiv.style.border = inputValue >= 500 ? "1px solid red" : "1px solid white";
   } else {
     resultDiv.innerHTML = "Digite um número válido.";
-    resultDiv.style.backgroundColor = "white";
+    resultDiv.style.backgroundColor = "white"; // Reset para branco se não for um número válido
   }
 }
 
@@ -86,3 +87,10 @@ function fechar() {
   searchOverlay.style.display = "";
   searchBar.style.display = "";
 }
+
+const modeSwitch = document.getElementById('modeSwitch');
+    const body = document.body;
+
+    modeSwitch.addEventListener('change', () => {
+      body.style.backgroundColor = modeSwitch.checked ? '#fff' : '#000';
+    });
